@@ -15,13 +15,13 @@
 
     <ImageView
         android:id="@+id/animationDrawable"
-        android:background="@drawable/anmation_draw_list"
+        android:background="@drawable/animvectdraw"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="20dp" />
+        android:contentDescription="@string/todo" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,10 @@
 package com.example.tpj.myapplication;
 
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.VectorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,15 +26,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initView() {
-        ivAnimationDrawList=findViewById(R.id.animationDrawable);
+        ivAnimationDrawList = findViewById(R.id.animationDrawable);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.animationDrawable:
-                AnimationDrawable drawable= (AnimationDrawable) ivAnimationDrawList.getBackground();
-                drawable.start();
+                Drawable drawable = ivAnimationDrawList.getBackground();
+                ((Animatable) drawable).start();
                 break;
         }
     }

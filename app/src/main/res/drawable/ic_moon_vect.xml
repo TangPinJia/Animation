@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="600"
+    android:viewportHeight="600">
+    <!-- viewportWidth 把使用的控件大小分成600等份 -->
+    <group
+        android:name="rotationGroup"
+        android:pivotX="300.0"
+        android:pivotY="300.0"
+        android:rotation="45.0">
+        <path
+            android:name="p"
+            android:fillColor="#FF000000"
+            android:pathData="M300,70 l 0,-70 70,70 0,0 -70,70z" />
+        <!-- M9,2c-1.05,0 -2.05,0.16 -3,0.46 4.06,1.27 7,5.06 7,9.54 0,4.48 -2.94,8.27 -7,9.54 0.95,0.3 1.95,0.46 3,0.46 5.52,0 10,-4.48 10,-10S14.52,2 9,2z -->
+    </group>
+</vector>
