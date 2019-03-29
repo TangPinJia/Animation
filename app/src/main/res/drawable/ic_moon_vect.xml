@@ -13,6 +13,19 @@
             android:name="p"
             android:fillColor="#FF000000"
             android:pathData="M300,70 l 0,-70 70,70 0,0 -70,70z" />
+        <!--path里 fillColor 填充颜色，strokeColor 边框颜色 -->
+        <!-- M代表起始坐标
+        ，L代表另一个坐标点，小写l代表相对于前面坐标的相对坐标，l后面如果没有其他命令，则默认l
+        ，V代表x轴不变（比如 v 5，代表相对前面坐标y轴加5得到的点，如使用大V，则y要写坐标值而不是相对值）
+        ，H代表y轴不变，h -5，代表x轴前移5（相对），大写H则要写x轴的值）
+        ，Z大小写都代表从最后一点绘制一条线到起始点
+        C = curveto 相当于cubicTo(),三次贝塞尔曲线
+        S = smooth curveto 同样三次贝塞尔曲线，更平滑
+        Q = quadratic Belzier curve quadTo()，二次贝塞尔曲线
+        T = smooth quadratic Belzier curveto 同样二次贝塞尔曲线，更平滑
+        A = elliptical Arc 相当于arcTo()，用于画弧
+        Z = closepath 相当于closeTo(),关闭path
+        -->
         <!-- M9,2c-1.05,0 -2.05,0.16 -3,0.46 4.06,1.27 7,5.06 7,9.54 0,4.48 -2.94,8.27 -7,9.54 0.95,0.3 1.95,0.46 3,0.46 5.52,0 10,-4.48 10,-10S14.52,2 9,2z -->
     </group>
 </vector>
