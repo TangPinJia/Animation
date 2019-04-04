@@ -19,10 +19,10 @@
         ，V代表x轴不变（比如 v 5，代表相对前面坐标y轴加5得到的点，如使用大V，则y要写坐标值而不是相对值）
         ，H代表y轴不变，h -5，代表x轴前移5（相对），大写H则要写x轴的值）
         ，Z大小写都代表从最后一点绘制一条线到起始点
-        C = curveto 相当于cubicTo(),三次贝塞尔曲线
-        S = smooth curveto 同样三次贝塞尔曲线，更平滑
-        Q = quadratic Belzier curve quadTo()，二次贝塞尔曲线
-        T = smooth quadratic Belzier curveto 同样二次贝塞尔曲线，更平滑
+        C = curveto 相当于cubicTo(),三阶贝塞尔曲线
+        S = smooth curveto 同样三阶贝塞尔曲线，更平滑
+        Q = quadratic Belzier curve quadTo()，qx1,y1 x,y 两个坐标点(p1，p2)都是二阶贝塞尔曲线
+        T = smooth quadratic Belzier curveto 同样二阶贝塞尔曲线，更平滑
         A = elliptical Arc 相当于arcTo()，用于画弧
         Z = closepath 相当于closeTo(),关闭path
         -->
