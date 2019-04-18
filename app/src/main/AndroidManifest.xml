@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.NameActivity" />
+
+        <service android:name=".service.MyIntentService" />
     </application>
 
 </manifest>
