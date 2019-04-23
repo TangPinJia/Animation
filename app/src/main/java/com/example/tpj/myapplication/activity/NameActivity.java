@@ -4,7 +4,10 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.widget.TextView;
 
+import com.example.tpj.myapplication.interfaces.RetrofitService;
 import com.example.tpj.myapplication.livedata.NameModel;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
@@ -18,7 +21,14 @@ import androidx.lifecycle.ViewModelProviders;
 import io.reactivex.Observable;
 import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.internal.schedulers.RxThreadFactory;
 import io.reactivex.schedulers.Schedulers;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by TPJ on 2019/4/1.
@@ -108,5 +118,30 @@ public class NameActivity extends AppCompatActivity {
 
             }
         };
+    }
+
+    /**
+     * 加载数据
+     */
+    public void loadData(){
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl("baseUrl")
+                .addConverterFactory(GsonConverterFactory.create())
+//                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())//结合rxjava
+                .build();
+
+        RetrofitService service=retrofit.create(RetrofitService.class);
+
+        service.getName().enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+
+            }
+        });
     }
 }

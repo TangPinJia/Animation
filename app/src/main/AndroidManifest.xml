@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.NameActivity" />
+        <activity android:name=".activity.LifecycleActivity" />
 
         <service android:name=".service.MyIntentService" />
     </application>
